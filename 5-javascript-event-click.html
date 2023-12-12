@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" onclick="alert('btn 1 diklik')">button 1</button>
+    <button class="btn2" onclick="diklik()">button 2</button>
+    <button class="btn3" onclick="gantiWarna()">ganti warna body</button>
+    <button class="btn4" onclick="gantiWarnaLagi()">ganti warna body lagi</button>
+    <button class="btn5" onclick="gantiWarnaIf()">ganti warna body lagi lagi</button>
+    <script>
+        const btn1 = document.getElementById('btn1')
+        console.log(btn1)
+        const btn2 = document.querySelector('.btn2')
+        console.log(btn2)
+        const btn3 = document.querySelector('.btn3')
+        const btn4 = document.querySelector('.btn4')
+        const btn5 = document.querySelector('.btn5')
+        let state = true
+
+        function diklik(){
+            alert('btn2 di klik')
+        }
+
+        function gantiWarna(){
+            document.body.style.backgroundColor = 'black'
+        }
+
+        function gantiWarnaLagi(){
+            document.body.style.backgroundColor = 'white'
+        }
+
+        function gantiWarnaIf(){
+            if(state){
+                document.body.style.backgroundColor = 'black'
+                state = false
+            }else{
+                document.body.style.backgroundColor = 'white'
+                state = true
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nama">
+    <button id="proses">proses</button>
+    <div id="hasil"></div>
+    <script>
+        const btn = document.getElementById('proses')
+        const inputNama = document.getElementById('nama')
+        const hasil = document.getElementById('hasil')
+        
+        console.log(inputNama)
+        console.log(btn)
+        btn.onclick = function(){
+            console.log(inputNama.value)
+            hasil.innerText = inputNama.value
+
+        }
+    </script>
+</body>
+</html>

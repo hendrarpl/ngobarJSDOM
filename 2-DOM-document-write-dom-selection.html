@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="judul">Bondowoso</h1>
+        <p class="p" id="kota">Bondowoso adalah kota tape</p>
+        <p class="p" id="pariwisata">Bondowoso juga memiliki Banyak pariwisata</p>
+    </div>
+
+    <script>
+        const div = document.querySelector('div')
+        console.log(div)
+        const judul = document.getElementById('judul')
+        console.log(judul)
+        const p = document.querySelectorAll('p')
+        console.log(p[0])
+        p[0].style.color = 'red'
+        p[1].style.color = 'tomato'
+    </script>
+</body>
+
+</html>

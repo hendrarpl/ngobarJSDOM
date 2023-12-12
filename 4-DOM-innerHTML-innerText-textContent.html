@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const body = document.body
+
+        const h1 = document.createElement('h1')
+        h1.textContent = '<em>Halo guys ini elemen h1 pakai textContent</em>'
+
+        const h2 = document.createElement('h2')
+        h2.innerText = '<em>Halo guys ini elemen h2 pakai innerText</em>'
+
+        const p = document.createElement('p')
+        p.innerHTML = '<em>Halo guys ini elemen p pakai inner HTML</em>'
+
+        body.append(h1, h2, p)
+    </script>
+</body>
+</html>

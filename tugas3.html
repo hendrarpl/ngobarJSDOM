@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            width: 80vh;
+            border: 1px solid black;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h4>USERNAME</h4>
+        <input type="text" id="username" placeholder="Masukkan username" />
+        <h4>PASSWORD</h4>
+        <input type="password" id="password" placeholder="Masukkan password" /></br></br>
+        <input type="submit" id="submit" value="Login" />
+    </form>
+    <div class="notif"></div>
+    <script>
+        const form = document.querySelector('form')
+        const username = document.getElementById('username')
+        const password = document.getElementById('password')
+        const loginbtn = document.getElementById('submit')
+        const notif = document.querySelector('.notif')
+
+        loginbtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            if(username.value == '' || password.value == ''){
+                alert('passwod atau username harus diisi')
+            }else if(username.value == 'admin' && password.value == 'admin'){
+                notif.innerHTML = "<h1> Username dan password benar, selamat datang admin </h1>"
+                form.style.display = "none"
+            }else{
+                alert('password dan username salah')
+            }
+        })
+    </script>
+</body>
+
+</html>

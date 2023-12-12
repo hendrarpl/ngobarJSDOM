@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tombol{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: bisque;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="tombol">Tombol</div>
+    <script>
+        const tombol = document.querySelector('.tombol')
+
+        tombol.addEventListener('click', function(){
+            tombol.style.backgroundColor = 'blue'
+        })
+        
+        tombol.addEventListener('click', function(){
+            tombol.style.color = 'red'
+        })
+
+        tombol.addEventListener('click', function(e){
+            console.log(e)
+            e.target.innerHTML = 'BUTTON'
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            background-color: fuchsia;
+            width: 300px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="btn">Klik saya</div>
+    <script>
+        const btn = document.getElementById('btn')
+        btn.onclick = function(){
+            alert('di klik')
+        }
+
+        btn.onmouseover = function(){
+            alert('mouseover')
+        }
+
+        btn.onmouseout = function(){
+            alert('mouseout')
+        }
+
+        btn.ondblclick = function(){
+            alert('dbclik')
+        }
+    </script>
+</body>
+</html>

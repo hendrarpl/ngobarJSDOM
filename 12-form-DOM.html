@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="pendaftaran">
+        <div>Nama : <input type="text" id="nama"></div>
+        <div>Umur : <input type="number" id="umur"></div>
+        <div>Jenis Kelamin : </div>
+        <input type="radio" name="jenis-kelamin" id="laki-laki" value="laki-laki"> Laki-laki
+        <input type="radio" name="jenis-kelamin" id="perempuan" value="perempuan"> Perempuan
+        <div><input type="submit" value="Kirim"></div>
+        <div class="hasil"></div>
+    </form>
+
+    <script>
+        const form = document.getElementById('pendaftaran')
+        const nama = document.getElementById('nama')
+        const umur = document.getElementById('umur')
+        const laki_laki = document.getElementById('laki-laki')
+        const perempuan = document.getElementById('perempuan')
+        const hasil = document.querySelector('.hasil')
+
+        form.addEventListener('submit', function(e){
+            
+            if(laki_laki.checked){
+                hasil.innerHTML = `Halo, nama saya ${nama.value} umur saya ${umur.value} jenis kelamin saya ${laki_laki.value}`
+            }else if(perempuan.checked){
+                hasil.innerHTML = `Halo, nama saya ${nama.value} umur saya ${umur.value} jenis kelamin saya ${perempuan.value}`
+            }
+
+            e.preventDefault()
+        })
+    </script>
+</body>
+</html>

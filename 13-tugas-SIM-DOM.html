@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pemberitahuan {
+            border: 1px solid red;
+            width: 300px;
+        }
+
+        .hasil {
+            border: 1px solid red;
+            width: 300px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            width: 80vh;
+            border: 1px solid black;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="formKu">
+            <h1>Form pembuatan SIM</h1>
+            <div class="pemberitahuan">
+                <blink>Persyaratan pembuatan SIM : Laki-laki harus diatas atau sama dengan 17 tahun, perempuan wajib
+                    harus diatas 17 tahun</blink>
+            </div>
+            <p>Nama Lengkap : <input type="text" id="nama" required></p>
+            <p>Umur : <input type="number" id="umur" required></p>
+            <p>Jenis Kelamin
+                <input type="radio" name="jenis-kelamin" id="laki-laki" value="laki-laki"> Laki-laki
+                <input type="radio" name="jenis-kelamin" id="perempuan" value="perempuan"> Perempuan
+            </p>
+            <p>Pilih jenis sim:
+                <select name="jenis-sim" id="">
+                    <option value="SIM A" id="simA">SIM A</option>
+                    <option value="SIM B" id="simB">SIM B</option>
+                    <option value="SIM C" id="simC">SIM C</option>
+                </select>
+            </p>
+            <p><input type="submit" value="Kirim"></p>
+            <div class="hasil"></div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('formKu')
+        const nama = document.getElementById('nama')
+        const umur = document.getElementById('umur')
+        const laki_laki = document.getElementById('laki-laki')
+        const perempuan = document.getElementById('perempuan')
+        const hasil = document.querySelector('.hasil')
+        let jenis_kelamin = ""
+
+
+
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault()
+            if (laki_laki.checked) {
+                jenis_kelamin = 'Laki-laki'
+                if (umur.value >= 17) {
+                    hasil.innerHTML = `Anda boleh membuat sim`
+                } else {
+
+                    hasil.innerHTML = `Anda belum boleh membuat sim`
+                }
+
+            } else if (perempuan.checked) {
+                jenis_kelamin = 'Perempuan'
+                if (umur.value > 17) {
+                    hasil.innerHTML = `Anda boleh membuat sim`
+                } else {
+
+                    hasil.innerHTML = `Anda belum boleh membuat sim`
+                }
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>
