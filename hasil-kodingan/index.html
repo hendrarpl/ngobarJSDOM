@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website gas 🚀</title>
+    <link rel="shortcut icon" href="https://m.media-amazon.com/images/I/51SSZ0TPTRL._AC_UF1000,1000_QL80_.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- kode html -->
+    <input id="input" type="text">
+    <button id="tombol">🎈</button>
+    <p id="hasil"></p>
+
+    <input id="input2" type="number">
+    <button id="tombol2">🚀</button>
+    <p id="hasil2"></p>
+
+    <!-- script -->
+    <script>
+    const input = document.getElementById('input')
+    const btn = document.getElementById('tombol')
+    const hasil = document.getElementById('hasil')
+
+    btn.onclick = function () {
+        hasil.innerText = input.value
+    }
+
+    const input2 = document.getElementById('input2')
+    const btn2 = document.getElementById('tombol2')
+    const hasil2 = document.getElementById('hasil2')
+
+    btn2.onclick = () => {
+        if(input2.value > 10){
+            hasil2.innerText = `angka ${input2.value} diatas 10`
+        }else{
+            hasil2.innerText = `angka ${input2.value} dibawah 10`
+        }
+    }
+    
+
+    </script>
+</body>
+
+</html>

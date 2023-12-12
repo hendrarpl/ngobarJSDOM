@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        img {
+            width: 450px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .contrast{
+            filter : contrast(30%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="gudeg.jpg" alt="">
+        <img src="miegoreng.jpg" alt="">
+        <img src="nasigoreng.jpg" alt="">
+        <img src="nasipadang.jpg" alt="">
+        <img src="nasiuduk.jpg" alt="">
+        <img src="pecel.jpg" alt="">
+    </div>
+
+    <script>
+
+        const img = document.querySelectorAll('img')
+
+        img.forEach((item) => {
+            item.addEventListener("click", function () {
+                item.classList.add('contrast')
+                console.log(item.classList)
+            });
+        });
+    </script>
+</body>
+
+</html>
